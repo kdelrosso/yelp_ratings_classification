@@ -94,7 +94,7 @@ class ReviewPreprocessing(object):
         neg_dict = self.pos_neg_words(-1, PROJECT_DIR + '/data/negative-words.txt')
         self.pos_neg_dict.update(neg_dict)
 
-        self.sent_dict = self.sentiment_words(PROJECT_DIR + '/data/SentiWordNet_3.0.0_20130122.txt')
+        self.sent_dict = self.sentiment_words(PROJECT_DIR + '/data/SentiWordNet.txt')
 
     def update_sentiment_score(self, val, senti_dict):
         """Return a dictionary with values updated based on the sign of val.
