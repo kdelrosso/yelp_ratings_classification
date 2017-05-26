@@ -3,7 +3,6 @@ import numpy as np
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
 from sklearn.metrics import mean_squared_error, mean_absolute_error, median_absolute_error
 
-
 def regression_errors(y_true, y_pred, model_name=''):
     """Print MSE, sqrt(MSE), mean absolute error, and median absolute error"""
 

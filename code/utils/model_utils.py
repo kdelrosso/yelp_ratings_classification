@@ -25,7 +25,6 @@ from nltk.stem.porter import PorterStemmer
 from nltk.stem.snowball import SnowballStemmer
 from nltk.stem.wordnet import WordNetLemmatizer
 
-
 RANDOM_SEED_SPLIT_1 = 8859
 RANDOM_SEED_SPLIT_2 = 3259
 TRAIN_TEST_VAL_PCT = [0.6, 0.2, 0.2]

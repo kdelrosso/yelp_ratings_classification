@@ -9,7 +9,6 @@ import pandas as pd
 from nltk.tokenize import RegexpTokenizer
 from nltk.corpus import stopwords
 
-
 PROJECT_DIR = path.dirname(path.dirname(path.dirname(path.abspath(__file__))))
 STOPWORDS = stopwords.words('english')
 

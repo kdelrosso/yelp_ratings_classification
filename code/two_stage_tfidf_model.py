@@ -3,7 +3,6 @@ import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 
-
 class NaiveBayesTwoStageClassifier(object):
     """A two stage classifier for text data.
 

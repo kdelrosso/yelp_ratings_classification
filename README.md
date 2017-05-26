@@ -44,9 +44,8 @@ to about 1.6 million reviews. The total count of unique words is over
 
 <div align="center">
 <table>
-<caption align="bottom">Figure 1: <i>Bad</i> (1), <i>Neutral</i> (3), & <i>Good</i> (5)
-Frequencies</caption>
 <tr><td><img src="./img/data_freq.jpg"/></td></tr>
+<caption align="bottom">Figure 1: <i>Bad</i> (1), <i>Neutral</i> (3), & <i>Good</i> (5) Frequencies</caption>
 </table>
 </div>
 
@@ -139,15 +138,15 @@ sentiment rates by category show a clear overlap, see Figure 3.
 
 <div align="center">
 <table>
-<caption align="bottom">Figure 2: Sentiment rate for three categories</caption>
 <tr><td><img src="./img/hist_sent.jpg"/></td></tr>
+<caption align="bottom">Figure 2: Sentiment rate for three categories</caption>
 </table>
 </div>
 
 <div align="center">
 <table>
-<caption align="bottom">Figure 3: Sentiment rate histograms</caption>
 <tr><td><img src="./img/hist_sent_2.jpg"/></td></tr>
+<caption align="bottom">Figure 3: Sentiment rate histograms</caption>
 </table>
 </div>
 
@@ -163,7 +162,6 @@ preferred. Though the boosting
 
 <div align="center">
 <table>
-<caption align="bottom">Table 1: Two-stage model summary using test data</caption>
 <tr>
     <th>Classifiers</th>
     <th>Confusion Matrices</th>
@@ -171,24 +169,25 @@ preferred. Though the boosting
 </tr>
 <tr>
     <td>Naive Bayes with TF-IDF</td>
-    <td><img src="./svgs/table_f6b6a5420e220a169efa6103fa718b5d.svg?invert_in_darkmode" align=middle width=186.260745pt height=67.39293pt/></td>
-    <td><img src="./svgs/table_e1bcf4283e913acd088841c7176506d9.svg?invert_in_darkmode" align=middle width=87.441255pt height=62.16276pt/></td>
+    <td><img src="https://rawgit.com/in git@github.com:kdelrosso/yelp_ratings_classification/None/svgs/table_f6b6a5420e220a169efa6103fa718b5d.svg?invert_in_darkmode" align=middle width=186.260745pt height=67.39293pt/></td>
+    <td><img src="https://rawgit.com/in git@github.com:kdelrosso/yelp_ratings_classification/None/svgs/table_e1bcf4283e913acd088841c7176506d9.svg?invert_in_darkmode" align=middle width=87.441255pt height=62.16276pt/></td>
 </tr>
 <tr>
     <td>Random Forest</td>
-    <td><img src="./svgs/table_41fba12e176370e593cce74cfbc1e6cd.svg?invert_in_darkmode" align=middle width=186.260745pt height=67.39293pt/> </td>
-    <td><img src="./svgs/table_f2f59f4f58b7c90cb383133b370ed39e.svg?invert_in_darkmode" align=middle width=87.441255pt height=62.16276pt/></td>
+    <td><img src="https://rawgit.com/in git@github.com:kdelrosso/yelp_ratings_classification/None/svgs/table_41fba12e176370e593cce74cfbc1e6cd.svg?invert_in_darkmode" align=middle width=186.260745pt height=67.39293pt/> </td>
+    <td><img src="https://rawgit.com/in git@github.com:kdelrosso/yelp_ratings_classification/None/svgs/table_f2f59f4f58b7c90cb383133b370ed39e.svg?invert_in_darkmode" align=middle width=87.441255pt height=62.16276pt/></td>
 </tr>
 <tr>
     <td>Gradient Boost</td>
-    <td><img src="./svgs/table_18a41358fb9051eec39345299c9bc222.svg?invert_in_darkmode" align=middle width=186.260745pt height=67.39293pt/></td>
-    <td><img src="./svgs/table_940b09a81d05221829c9e0b41f6e2579.svg?invert_in_darkmode" align=middle width=87.441255pt height=62.16276pt/></td>
+    <td><img src="https://rawgit.com/in git@github.com:kdelrosso/yelp_ratings_classification/None/svgs/table_18a41358fb9051eec39345299c9bc222.svg?invert_in_darkmode" align=middle width=186.260745pt height=67.39293pt/></td>
+    <td><img src="https://rawgit.com/in git@github.com:kdelrosso/yelp_ratings_classification/None/svgs/table_940b09a81d05221829c9e0b41f6e2579.svg?invert_in_darkmode" align=middle width=87.441255pt height=62.16276pt/></td>
 </tr>
 <tr>
     <td>Ensemble</td>
-    <td><img src="./svgs/table_66cc73002ed62d0226b95176e3420a01.svg?invert_in_darkmode" align=middle width=186.260745pt height=67.39293pt/></td>
-    <td><img src="./svgs/table_940b09a81d05221829c9e0b41f6e2579.svg?invert_in_darkmode" align=middle width=87.441255pt height=62.16276pt/></td>
+    <td><img src="https://rawgit.com/in git@github.com:kdelrosso/yelp_ratings_classification/None/svgs/table_66cc73002ed62d0226b95176e3420a01.svg?invert_in_darkmode" align=middle width=186.260745pt height=67.39293pt/></td>
+    <td><img src="https://rawgit.com/in git@github.com:kdelrosso/yelp_ratings_classification/None/svgs/table_940b09a81d05221829c9e0b41f6e2579.svg?invert_in_darkmode" align=middle width=87.441255pt height=62.16276pt/></td>
 </tr>
+<caption align="bottom">Table 1: Two-stage model summary using test data</caption>
 </table>
 </div>
 
@@ -218,7 +217,7 @@ Furthermore, we’ll offer insight and examples using Word2Vec for
 simplicity, however a natural extension exists for Doc2Vec by replacing
 individual words with documents (in our case a single review).
 
-The typical first Word2Vec example is <p align="center"><img src="svgs/67cb08f1a6424124da0f36b067ec9716.svg?invert_in_darkmode" align=middle width=227.61585pt height=14.55729pt/></p>
+The typical first Word2Vec example is <p align="center"><img src="https://rawgit.com/in	git@github.com:kdelrosso/yelp_ratings_classification/None/svgs/67cb08f1a6424124da0f36b067ec9716.svg?invert_in_darkmode" align=middle width=227.61585pt height=14.55729pt/></p>
 Word2Vec uses unsupervised learning, where the distance between word
 vectors caries meaning. Each dimension of the word vector encodes a
 property of the word, and the magnitude of the word vector projected
@@ -228,7 +227,6 @@ word. Using the Yelp dataset, we can see which words are most similar to
 
 <div align="center">
 <table>
-<caption align="bottom">Table 2: Words most similar to <i>pizza</i></caption>
 <tr>
     <th>Word</th>
     <th>Cosine Similarity</th>
@@ -249,13 +247,14 @@ word. Using the Yelp dataset, we can see which words are most similar to
     <td>pepperoni</td>
     <td>0.874</td>
 </tr>
+<caption align="bottom">Table 2: Words most similar to <i>pizza</i></caption>
 </table>
 </div>
 
 Similar to the first example, we can find words that are most similar
 to:
 
-<p align="center"><img src="svgs/e4202ba8bdc88d2970bb90117f8caac7.svg?invert_in_darkmode" align=middle width=149.28144pt height=14.55729pt/></p>
+<p align="center"><img src="https://rawgit.com/in	git@github.com:kdelrosso/yelp_ratings_classification/None/svgs/e4202ba8bdc88d2970bb90117f8caac7.svg?invert_in_darkmode" align=middle width=149.28144pt height=14.55729pt/></p>
 
 <div align="center">
 <table>
@@ -291,7 +290,6 @@ matrix and classification metrics:
 
 <div align="center">
 <table>
-<caption align="bottom">Table 3: Doc2Vec model summary using test data</caption>
 <tr>
     <th>Classifiers</th>
     <th>Confusion Matrices</th>
@@ -299,9 +297,10 @@ matrix and classification metrics:
 </tr>
 <tr>
     <td>Doc2Vec with kNN</td>
-    <td><img src="./svgs/table_0c812bde2f45c4e999e7942ea3d9fc9f.svg?invert_in_darkmode" align=middle width=161.603145pt height=67.39293pt/></td>
-    <td><img src="./svgs/table_66fa95549ce271f7258be1e4dcaefb87.svg?invert_in_darkmode" align=middle width=87.441255pt height=62.16276pt/></td>
+    <td><img src="https://rawgit.com/in git@github.com:kdelrosso/yelp_ratings_classification/None/svgs/table_0c812bde2f45c4e999e7942ea3d9fc9f.svg?invert_in_darkmode" align=middle width=161.603145pt height=67.39293pt/></td>
+    <td><img src="https://rawgit.com/in git@github.com:kdelrosso/yelp_ratings_classification/None/svgs/table_66fa95549ce271f7258be1e4dcaefb87.svg?invert_in_darkmode" align=middle width=87.441255pt height=62.16276pt/></td>
 </tr>
+<caption align="bottom">Table 3: Doc2Vec model summary using test data</caption>
 </table>
 </div>
 
@@ -322,7 +321,7 @@ likely to provide key insights.
 
 Our analysis has utilizes two different approaches of text
 classification. The first method is a natural extension from the TF-IDF
-transformation by including <img src="svgs/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode" align=middle width=9.83004pt height=14.10255pt/>-grams, sentiment analysis, and a
+transformation by including *n*-grams, sentiment analysis, and a
 dual-layer classification algorithm (Naive Bayes and Random Forest,
 respectively). The second method instead used the more recent Doc2Vec
 framework, building off the success of the Word2Vec word transformation,

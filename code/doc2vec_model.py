@@ -10,7 +10,6 @@ import gensim.models.doc2vec
 from utils.preprocessing_utils import text_tokenizer
 from utils.model_utils import most_common_element
 
-
 PROJECT_DIR = path.dirname(path.dirname(path.abspath(__file__)))
 
 class LabeledLineSentence(object):

@@ -8,7 +8,6 @@ from utils.results_utils import classification_errors
 from two_stage_tfidf_model import NaiveBayesTwoStageClassifier
 from doc2vec_model import Doc2VecClassifier
 
-
 PROJECT_DIR = path.dirname(path.dirname(path.abspath(__file__)))
 YELP_REVIEWS_QUERY = """
     SELECT
@@ -156,7 +155,6 @@ def doc2vec_examples(yelp_model):
     print yelp_model.doesnt_match('waiter server bartender napkin'.split())
     print yelp_model.most_similar(positive=['bar', 'food'], negative=['alcohol'])
     print yelp_model.most_similar(positive=['drink', 'hot', 'caffeine'])
-
 
 if __name__ == '__main__':
 

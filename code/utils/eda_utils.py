@@ -8,9 +8,7 @@ warnings.filterwarnings("ignore")
 import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set_style('whitegrid')
-
 from preprocessing_utils import text_tokenizer
-
 
 def plot_sentiment(df):
     """Plot a bar chart of the sentiment rate (sentiment score / length of review)

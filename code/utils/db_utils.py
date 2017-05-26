@@ -1,7 +1,6 @@
 import pandas as pd
 import psycopg2
 
-
 def setup_sql_connection():
     """Return a connection to the yelp database."""
 
