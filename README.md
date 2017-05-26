@@ -1,4 +1,4 @@
-# Classification of Customer Ratings using Customer Reviews from the Yelp Dataset Challenge
+# Classification of User Star Ratings using Review Text from the Yelp Dataset Challenge
 
 ## Introduction
 

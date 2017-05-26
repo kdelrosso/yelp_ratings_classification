@@ -8,7 +8,37 @@ To convert the original json to csv we used a script available [here](https://gi
 
 ```
 $ python json_to_csv_converter.py ../data/yelp_academic_dataset_review.json
-``` 
+```
+
+We created a PostgresSQL database to store the data
+
+```
+$ psql -c "CREATE DATABASE yelp;"
+```
+
+and created a `reviews` table
+
+```
+DROP TABLE IF EXISTS reviews;
+
+CREATE TABLE reviews (
+    user_id             varchar(100),
+    review_id           varchar(100),
+    text                text,
+    votes_cool          int,
+    business_id         varchar(100),
+    votes_funny         int,
+    stars               int,
+    date                timestamp,
+    type                varchar(100),
+    votes_useful        int,
+    primary key(review_id)
+);
+
+COPY reviews FROM '../data/yelp_academic_dataset_review.csv' CSV HEADER;
+```
+
+copying data from the .csv file created above.
 
 ## Running the Code
 
@@ -26,8 +56,8 @@ show_all_eda(df)
 
 which calls functions in `utils/eda_utils.py`. We can split our data into training, test, and validation sets and use grid search to optimize stage 1 & 2 model parameters using
 
-```   
-X_train, y_train, X_test, y_test, X_val, y_val = train_test_val_split(df[KEEP_COLS], 'stars') 
+```
+X_train, y_train, X_test, y_test, X_val, y_val = train_test_val_split(df[KEEP_COLS], 'stars')
 grid_search_naive_bayes_with_tfidf(df_train['text'].values, df_train['stars'].values)
 grid_search_stage_two(X_train, y_train)
 ```
