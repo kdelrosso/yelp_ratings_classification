@@ -16,7 +16,6 @@ YELP_REVIEWS_QUERY = """
         text,
         stars
     FROM reviews
-    limit 2000
     ;
     """
 KEEP_COLS = [
@@ -158,18 +157,29 @@ def doc2vec_examples(yelp_model):
     print yelp_model.most_similar(positive=['bar', 'food'], negative=['alcohol'])
     print yelp_model.most_similar(positive=['drink', 'hot', 'caffeine'])
 
+
 if __name__ == '__main__':
 
+    # load and preprocess the yelp reviews data
     df = get_reviews_data(PROJECT_DIR + '/data/saved_df.pkl', use_saved=True)
 
+    # exploratory data analysis plots
+    show_all_eda(df)
+
+    # split data into training, test, and validation sets
+    df_train, df_test, df_val = df_train_test_val_split(df[KEEP_COLS])
     X_train, y_train, X_test, y_test, X_val, y_val = train_test_val_split(df[KEEP_COLS], 'stars')
+    train_dict, test_dict, val_dict = train_test_val_dicts(df, 'review_id', 'stars')
 
-    # show_all_eda(df)
-    # grid_search_naive_bayes_with_tfidf(df_train['text'].values, df_train['stars'].values)
-    # grid_search_stage_two(X_train, y_train)
+    # use grid search to optimize stage 1 & 2 model parameters
+    grid_search_naive_bayes_with_tfidf(df_train['text'].values, df_train['stars'].values)
+    grid_search_stage_two(X_train, y_train)
 
+    # fit and print classification results for the two stage tfidf model
     two_stage_model(X_train, y_train, X_test, y_test)
 
-    train_dict, test_dict, val_dict = train_test_val_dicts(df, 'review_id', 'stars')
+    # fit and print classification results for the Doc2Vec model
     yelp_model = doc2vec_model(df, train_dict, test_dict, k=25)
+
+    # use the Doc2Vec model
     doc2vec_examples(yelp_model)

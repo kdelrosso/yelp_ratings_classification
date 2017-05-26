@@ -7,9 +7,8 @@ from gensim.models import Doc2Vec
 from gensim.models.doc2vec import LabeledSentence
 import gensim.models.doc2vec
 
-from utils.preprocessing_utils import text_tokenizer, ReviewPreprocessing
-from utils.model_utils import train_test_val_dicts, most_common_element
-from utils.results_utils import classification_errors
+from utils.preprocessing_utils import text_tokenizer
+from utils.model_utils import most_common_element
 
 
 PROJECT_DIR = path.dirname(path.dirname(path.abspath(__file__)))

@@ -25,8 +25,6 @@ from nltk.stem.porter import PorterStemmer
 from nltk.stem.snowball import SnowballStemmer
 from nltk.stem.wordnet import WordNetLemmatizer
 
-from preprocessing_utils import ReviewPreprocessing
-
 
 RANDOM_SEED_SPLIT_1 = 8859
 RANDOM_SEED_SPLIT_2 = 3259

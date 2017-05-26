@@ -5,8 +5,6 @@ import numpy as np
 import pandas as pd
 import warnings
 warnings.filterwarnings("ignore")
-# from nltk.tokenize import RegexpTokenizer
-# from nltk.corpus import stopwords
 import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set_style('whitegrid')

@@ -1,6 +1,6 @@
 from __future__ import division
 from os import path
-from collections import Counter, defaultdict
+from collections import Counter
 import re
 import string
 import cPickle
